@@ -1,0 +1,148 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap'); */
+
+* {
+  /* margin:0;
+  padding:0; */
+  box-sizing:border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+.wrapper {
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  height:100vh;
+  width:100%;
+  background:whitesmoke;
+  background-size:cover;
+  background-position:center;
+  /* animation:animateBg 5s linear infinite; */
+  flex-direction: column;
+}
+@keyframes animateBg {
+  100% {
+    filter:hue-rotate(360deg);
+  }
+}
+
+.login_header {
+  color: black;
+  background-color: whitesmoke;
+}
+.login-box {
+  position: relative;
+  width: 400px;
+  background: transparent;
+  border-radius: 15px;
+  border: 2px solid rgb(234, 228, 228);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(15px);
+  background: white;
+}
+.login-box h2 {
+  font-size:2em;
+  color:black;
+  text-align:center;
+}
+.input-box {
+  position:relative;
+  width:310px;
+  /* margin:20px 0; */
+  border-bottom:1px solid #d0cbcb;
+}
+.input-box label {
+  position:absolute;
+  top:50%;
+  left:5px;
+  transform:translateY(-50%);
+  font-size:1em;
+  color:#8f8a8a;
+  pointer-events:none;
+  transition:.5s;
+}
+.input-box input:focus  ~ label,
+.input-box input:valid  ~ label {
+  top:-5px;
+}
+.input-box input {
+  width:100%;
+  height:50px;
+  background:transparent;
+  border:none;
+  outline:none;
+  font-size:1em;
+  color: black;
+  padding:0 35px 0 5px;
+}
+.input-box .icon {
+  position:absolute;
+  right:8px;
+  top:50%;
+  color: #d0cbcb;
+  transform: translateY(-50%);
+}
+.remember-forgot {
+  margin:-15px 0 15px;
+  font-size:.9em;
+  color:#d0cbcb;
+  display:flex;
+  justify-content:space-between;
+}
+.remember-forgot label input {
+  margin-right:3px;
+}
+/* .remember-forgot a {
+  color:#fff;
+  text-decoration:none;
+} */
+/* .remember-forgot a:hover {
+  text-decoration:underline;
+} */
+.loggin_submit {
+  width:100%;
+  height:40px;
+  background-color:#d0cbcb;
+  border:none;
+  border-radius:40px;
+  cursor:pointer;
+  font-size:1em;
+  color:white;
+  font-weight:500;
+  margin-top: 20px;
+}
+button:hover {
+  background: #8f8a8a;
+}
+.register-link {
+  font-size:.9em;
+  color:#8f8a8a;
+  text-align:center;
+  margin:25px 0 10px;
+}
+.register-link:hover {
+  cursor: pointer;
+}
+.register-link p a {
+  color:#8f8a8a;
+  text-decoration:none;
+  font-weight:600;
+}
+.register-link p a:hover {
+  text-decoration:underline;
+}
+@media (max-width:500px) {
+  .login-box {
+    width:100%;
+    height:100vh;
+    border:none;
+    border-radius:0;
+  }
+  .input-box {
+    width:290px;
+  }
+}
+.error {
+    color: red;
+    text-align: left;
+}

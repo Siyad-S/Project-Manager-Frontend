@@ -1,0 +1,284 @@
+.home_body {
+    height: 100vh;
+    position: relative;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #2b2e31;
+    color: white;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-right {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-right i {
+    font-size: 40px;
+    position: relative;
+}
+
+.kanban-board {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.column {
+    width: 30%;
+    background-color: #f4f4f4;
+    margin: 0 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.column h2 {
+    text-align: center;
+}
+
+.tasks {
+    min-height: 200px;
+}
+
+.task {
+    background-color: white;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 3px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Modal Content Box */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: 10% auto;
+    /* 10% from the top and centered */
+    padding: 20px;
+    border-radius: 5px;
+    width: 40%;
+    /* Adjust based on preference */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* Close Button */
+.close-button {
+    color: #aaa;
+    position: absolute;
+    top: 0;
+    right: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    cursor: pointer;
+}
+
+/* Form Styling */
+#add-task-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#add-task-form input[type="text"],
+#add-task-form textarea,
+#add-task-form select {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#add-task-form textarea {
+    height: 100px;
+    /* Adjust height for description input */
+}
+
+#add-task-form button {
+    background-color: #4caf50;
+    /* A green background for the Add Task button */
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.add_remove_btn {
+    padding: 10px 15px !important;
+}
+
+.looped_fields_btn {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+}
+
+#add-task-form button:hover {
+    background-color: #45a049;
+}
+
+/* Responsive Modal Content */
+@media screen and (max-width: 600px) {
+    .modal-content {
+        width: 80%;
+        /* Full width on smaller screens */
+    }
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #007bff;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Header and Footer Styles */
+.header .footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f0f2f5;
+    /* Light grey for a clean look */
+    color: #333;
+    /* Dark grey text for contrast */
+}
+
+/* Modal Styles for a Cleaner Look */
+.modal {
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity for the backdrop */
+}
+
+.modal-content {
+    background-color: #ffffff;
+    margin: 10% auto;
+    /* Adjusted for better positioning */
+    padding: 20px;
+    border-radius: 8px;
+    /* Rounded corners for a modern look */
+    width: 50%;
+    /* Adjust width for a better modal size */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Soft shadow for depth */
+}
+
+.stages_modal {
+    width: 30% !important;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Additional Styles for Form Elements Inside Modal */
+#add-task-form input[type="text"],
+#add-task-form textarea,
+#add-task-form select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    /* Ensures padding doesn't affect width */
+}
+
+#add-task-form button[type="submit"] {
+    width: 100%;
+    background-color: #4caf50;
+    /* Green button for submission */
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#add-task-form button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.edit_delete {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.profile_dropdown {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: start;
+}
+
+.profile_dropdown ul {
+    padding: 10px;
+    margin: 0;
+    background-color: #2b2e31;
+    border-radius: 0px 0px 5px 5px;
+    width: 200px;
+    color: white;
+    position: absolute;
+    top: 70px;
+    right: 0px;
+}
+
+.profile_dropdown ul li {
+    padding: 15px;
+    border-bottom: 1px solid rgb(181, 177, 177);
+}
+
+.profile_dropdown ul li:hover {
+    background-color: #242628;
+    cursor: pointer;
+}
+
+.profile_dropdown ul li:nth-child(4) {
+    border-bottom: 0px;
+
+}

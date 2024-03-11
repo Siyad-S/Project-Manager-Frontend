@@ -1,0 +1,12 @@
+.shared_header {
+    background-color: #2b2e31;
+    text-align: start;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+h2 {
+    margin: 0;
+}
